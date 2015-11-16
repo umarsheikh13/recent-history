@@ -10,7 +10,7 @@ https://chrome.google.com/webstore/detail/recent-history/fbmkfdfomhhlonpbnpiiblo
 
 #### Toolbar
 
-https://chrome.google.com/webstore/detail/milbdjfbgdilllphgdmlahonjodlfokh
+https://chrome.google.com/webstore/detail/recent-history-toolbar-ic/milbdjfbgdilllphgdmlahonjodlfokh
 
 ## Features
 
