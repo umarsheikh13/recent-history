@@ -1,6 +1,9 @@
 
 /**
- * This gulpfile builds the "Toolbar Icon" version of the extension.
+ * This gulpfile builds both versions of the extension.
+ *
+ * gulp build-rh 	Builds Recent History in the recenthistory directory
+ * gulp build-rhti 	Builds Recent History (Toolbar Icon) in the recenthistory-ti directory
  */
 
 'use strict';
