@@ -1,0 +1,72 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  background-color: #eee;
+}
+
+h1 {
+  font-size: medium;
+  color: green;
+}
+
+#options {
+  display: block;
+  margin: 50px auto;
+  background: url('../images/options-bg.gif') no-repeat top center;
+  width: 300px;
+}
+
+#options-tube {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+table #left {
+  width: 57px;
+}
+
+table #left img {
+  text-align: left;
+}
+
+#options-content {
+  display: block;
+  margin-left: 8px;
+}
+
+#options-footer {
+  display: block;
+  margin: 0 auto;
+  background: url('../images/options-bg.gif') no-repeat bottom center;
+  height: 10px;
+  width: 300px;
+}
+
+.i16 {
+  background: url('../images/icon16.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i19 {
+  background: url('../images/icon19.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i16o {
+  background: url('../images/icon16-other.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i19o {
+  background: url('../images/icon19-other.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}

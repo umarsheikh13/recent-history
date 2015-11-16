@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Options | Recent History</title>
+<script src="scripts/moo.js"></script>
+<script src="scripts/func.js"></script>
+<style>
+@import url('css/options.css');
+</style>
+</head>
+
+<body>
+<div id="options">
+  <div id="options-tube">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="left" valign="top">
+          <img alt="Icon" src="images/icon48.png">
+          <br>
+          <div id="options-status"></div>
+        </td>
+        <td id="right" valign="top">
+          <div id="options-content">
+            <form id="options-form" action="#">
+              <label for="itemsno">Recent History:</label>
+              <br>
+              <select name="itemsno" id="itemsno">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+              </select>
+              <br>
+              <br>
+              <label for="rctitemsno">Recently Closed Tabs:</label>
+              <br>
+              <select name="rctitemsno" id="rctitemsno">
+                <option value="0">0</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+              <br>
+              <br>
+              <label for="rhwidth">Width:</label>
+              <br>
+              <select name="rhwidth" id="rhwidth">
+                <option value="225px">225px</option>
+                <option value="250px">250px</option>
+                <option value="275px">275px</option>
+                <option value="300px">300px</option>
+                <option value="325px">325px</option>
+              </select>
+              <br>
+              <br>
+              <label for="clearsu">Clear History on Startup:</label>
+              <br>
+              <select name="clearsu" id="clearsu">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <br>
+              <br>
+              <span id="rhicon">Icon Size:
+              <br>
+              <input id="i16" rel="icons" type="radio" name="rhicon" value="icon16"><label class="i16" for="i16">&nbsp;</label>
+              <input id="i19" rel="icons" type="radio" name="rhicon" value="icon19"><label class="i19" for="i19">&nbsp;</label>
+              <input id="i16o" rel="icons" type="radio" name="rhicon" value="icon16-other"><label class="i16o" for="i16o">&nbsp;</label>
+              <input id="i19o" rel="icons" type="radio" name="rhicon" value="icon19-other"><label class="i19o" for="i19o">&nbsp;</label>
+              </span>
+              <br>
+              <br>
+              <label for="rhlang">Language:</label>
+              <br>
+              <select name="rhlang" id="rhlang">
+                <option value="cs">Čeština</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+              </select>
+              <br>
+              <br>
+              <input type="button" id="save" name="save" value="Save">
+              <br>
+              <br>
+              <input type="button" id="clear" name="clear" value="Clear Recent History"><br>
+              <span id="notice">(This will only clear the Recent History extension's cache not your actual history)</span>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="options-footer"></div>
+</div>
+</body>
+
+</html>

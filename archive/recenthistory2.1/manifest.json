@@ -1,0 +1,27 @@
+{
+  "name": "Recent History",
+  "version": "2.1",
+  "minimum_chrome_version": "5.0",
+  "default_locale": "en",
+  "description": "__MSG_aboutText__",
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "permissions": [
+    "tabs",
+    "history",
+    "bookmarks",
+    "chrome://favicon/",
+    "notifications"
+  ],
+  "icons": {
+    "16": "images/icon16-other.png",
+    "19": "images/icon19-other.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "page_action": {
+    "default_icon": "images/icon19-blank.png",
+    "default_popup": "popup.html"
+  }
+}

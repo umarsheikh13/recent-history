@@ -1,0 +1,143 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  background-color: #eee;
+}
+
+h1 {
+  font-size: medium;
+  color: green;
+}
+
+#options {
+  display: block;
+  margin: 50px auto;
+  background: url('../images/options-bg.gif') no-repeat top center;
+  width: 300px;
+}
+
+#options-tube {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+table #left {
+  width: 57px;
+}
+
+table #left img {
+  text-align: left;
+}
+
+#options-content {
+  display: block;
+  margin-left: 8px;
+}
+
+#options-footer {
+  display: block;
+  margin: 0 auto;
+  background: url('../images/options-bg.gif') no-repeat bottom center;
+  height: 10px;
+  width: 300px;
+}
+
+.i16 {
+  background: url('../images/icon16.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i19 {
+  background: url('../images/icon19.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i16o {
+  background: url('../images/icon16-other.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+.i19o {
+  background: url('../images/icon19-other.png') no-repeat left center;
+  padding-left: 21px;
+  font-size: large;
+}
+
+#rhlistorder {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#rhlistorder li {
+  cursor: move;
+  font-style: italic;
+  color: #4a689e;
+}
+
+#move-hint {
+  position: absolute;
+  margin-left: -142px;
+  left: 50%;
+  top: 339px;
+}
+
+#mv-hint {
+  position: absolute;
+  margin-left: -142px;
+  left: 50%;
+  top: 450px;
+}
+
+#hp-hint {
+  position: absolute;
+  margin-left: -123px;
+  left: 50%;
+  top: 566px;
+}
+
+#options-status {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#mv-blocklist {
+  display: block;
+  border: 1px solid #ccc;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#mv-blocklist li {
+  background-color: #ebeff9;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  list-style-type: none;
+  margin: 0 0 1px 0;
+  cursor: pointer;
+  font-size: 12px;
+  display: block;
+  padding: 2px;
+}
+
+.mv-remove {
+  background-color: #f89c9c !important;
+}
+
+#mvblocklist {
+  background: url('../images/remove.gif') no-repeat right center;
+  padding-right: 20px;
+}

@@ -1,0 +1,237 @@
+<script>
+
+// Time
+function timeNow(){
+
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  if(hours < 10){
+    hours = '0'+hours;
+  }
+  if(minutes < 10){
+    minutes = '0'+minutes;
+  }
+  return hours+':'+minutes;
+  
+}
+
+// Current tab
+function currentTab(tab,id){
+
+  chrome.pageAction.show(id);
+
+  if(tab.status == 'complete'){
+  
+    var time = timeNow();
+    var title = tab.title;
+    var url = tab.url;
+    var furl = tab.favIconUrl;
+    var history = localStorage['rh-history'];
+    var valid = (/^chrome\:\/\/(.*)/.test(url));
+
+    title = title.replace('@','&#64;');
+    title = title.replace(',','&#44;');
+    
+    var check = history.split('@');
+    var checkstr = time+','+title+','+url+','+furl+','+id;
+    
+    if(title == 'New Tab' || valid || check[0] == checkstr){
+      var dont = 'false';
+    }else{
+      var dont = 'true';
+    }
+    
+    if(dont == 'true'){
+      
+      var tabi = time+','+title+','+url+','+furl+','+id+'@';
+      history = tabi+history;
+      localStorage['rh-history'] = history;
+    
+      history = localStorage['rh-history'].split('@');
+      
+      var cutoff = 50;
+      var rh = '';
+      
+      if(history.length < cutoff){
+        cutoff = history.length;
+      }
+      
+      for(i=0;i<cutoff;i++){
+      
+        if(history[i].split(',').length > 1){
+          rh += history[i]+'@';
+        }
+      
+      }
+      localStorage['rh-history'] = rh;
+      
+    }
+    
+  }
+  
+}
+
+// Current tab backup
+function currentTabBackup(tab,id){
+
+  if(tab.status == 'complete'){
+  
+    var time = timeNow();
+    var title = tab.title;
+    var url = tab.url;
+    var furl = tab.favIconUrl;
+    var history = localStorage['rh-historytwo'];
+    var valid = (/^chrome\:\/\/(.*)/.test(url));
+
+    title = title.replace('@','&#64;');
+    title = title.replace(',','&#44;');
+    
+    var check = history.split('@');
+    var checkstr = time+','+title+','+url+','+furl+','+id;
+    
+    if(title == 'New Tab' || valid || check[0] == checkstr){
+      var dont = 'false';
+    }else{
+      var dont = 'true';
+    }
+    
+    if(dont == 'true'){
+      
+      var tabi = time+','+title+','+url+','+furl+','+id+'@';
+      history = tabi+history;
+      localStorage['rh-historytwo'] = history;
+    
+      history = localStorage['rh-historytwo'].split('@');
+      
+      var cutoff = 50;
+      var rh = '';
+      
+      if(history.length < cutoff){
+        cutoff = history.length;
+      }
+      
+      for(i=0;i<cutoff;i++){
+      
+        if(history[i].split(',').length > 1){
+          rh += history[i]+'@';
+        }
+      
+      }
+      localStorage['rh-historytwo'] = rh;
+      
+    }
+    
+  }
+  
+}
+
+// Closed tab
+function closedTab(id){
+
+  var history = localStorage['rh-historytwo'].split('@');
+  var rhhc = localStorage['rh-historyclosed'];
+  var tabi = '';
+  
+  for(var i in history){
+  
+    if(history[i].split(',').length > 1){
+    
+      var item = history[i].split(',');
+    
+      if(item[4] == id){
+      
+        tabi = timeNow()+','+item[1]+','+item[2]+','+item[3]+','+item[4];
+        localStorage['rh-historyclosed'] = tabi+'@'+rhhc;
+      
+      }
+    
+    }
+  
+  }
+  
+  rhhc = localStorage['rh-historyclosed'].split('@');
+  
+  var cutoff = 50;
+  var rh = '';
+  
+  if(rhhc.length < cutoff){
+    cutoff = rhhc.length;
+  }
+  
+  for(i=0;i<cutoff;i++){
+  
+    if(rhhc[i].split(',').length > 1){
+      rh += rhhc[i]+'@';
+    }
+  
+  }
+  localStorage['rh-historyclosed'] = rh;
+
+}
+
+// On tab update
+chrome.tabs.onUpdated.addListener(function(id, info, tab){currentTab(tab,id);currentTabBackup(tab,id)});
+chrome.tabs.onRemoved.addListener(function(id){closedTab(id)});
+
+// Default values
+if(!localStorage['rh-history'] || localStorage['rh-history'] == null || localStorage['rh-history'] == ''){
+  localStorage['rh-history'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+}
+
+localStorage['rh-historytwo'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+
+if(!localStorage['rh-historyclosed'] || localStorage['rh-historyclosed'] == null || localStorage['rh-historyclosed'] == ''){
+  localStorage['rh-historyclosed'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+}
+
+if(!localStorage['rh-itemsno'] || localStorage['rh-itemsno'] == null || localStorage['rh-itemsno'] == ''){
+  localStorage['rh-itemsno'] = 10;
+}
+
+if(!localStorage['rct-itemsno'] || localStorage['rct-itemsno'] == null || localStorage['rct-itemsno'] == ''){
+  localStorage['rct-itemsno'] = 5;
+}
+
+if(!localStorage['clearsu'] || localStorage['clearsu'] == null || localStorage['clearsu'] == ''){
+  localStorage['clearsu'] = 'no';
+}
+
+if(!localStorage['rh-icon'] || localStorage['rh-icon'] == null || localStorage['rh-icon'] == ''){
+  localStorage['rh-icon'] = '16';
+}
+
+if(!localStorage['rh-lang'] || localStorage['rh-lang'] == null || localStorage['rh-lang'] == ''){
+  localStorage['rh-lang'] = 'en';
+}
+
+if(localStorage['clearsu'] == 'yes'){
+  localStorage['rh-history'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+  localStorage['rh-historyclosed'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+}
+
+// Page action icon
+chrome.tabs.onCreated.addListener(function(tab){
+  chrome.pageAction.setIcon({tabId: tab.id, path: "images/icon"+localStorage['rh-icon']+".png"});
+  chrome.pageAction.setTitle({tabId: tab.id, title: "Recent History"});
+  chrome.pageAction.show(tab.id);
+});
+
+// Startup
+chrome.windows.getAll({}, function(wins){
+  for(var i in wins){
+    if(wins[i].id !== undefined){
+      chrome.tabs.getAllInWindow(wins[i].id, function(tabs){
+        for(var n in tabs){
+          if(tabs[n].id !== undefined){
+            chrome.pageAction.setIcon({tabId: tabs[n].id, path: "images/icon"+localStorage['rh-icon']+".png"});
+            chrome.pageAction.setTitle({tabId: tabs[n].id, title: "Recent History"});
+            chrome.pageAction.show(tabs[n].id);
+          }
+        }
+      });
+    }
+  }
+});
+
+</script>

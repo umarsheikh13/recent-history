@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "Последние посещенные страницы"
+  },
+  "recentlyClosedTabs": {
+    "message": "Недавно закрытые вкладки"
+  },
+  "showAllHistory": {
+    "message": "Вся история"
+  },
+  "clearOnStartup": {
+    "message": "Стирать историю при старте"
+  },
+  "iconSize": {
+    "message": "Размер иконки"
+  },
+  "language": {
+    "message": "Язык"
+  },
+  "clearNotice": {
+    "message": "(Очищает только историю расширения, а не фактическую историю)"
+  },
+  "clearRecentHistory": {
+    "message": "Стереть историю"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "yes": {
+    "message": "Да"
+  },
+  "no": {
+    "message": "нет"
+  },
+  "width": {
+    "message": "ширина"
+  },
+  "search": {
+    "message": "поиск"
+  },
+  "order": {
+    "message": "Порядок"
+  },
+  "mostVisited": {
+    "message": "Наиболее посещаемые"
+  },
+  "time": {
+    "message": "Время"
+  },
+  "recentBookmarks": {
+    "message": "Последние Закладки"
+  },
+  "date": {
+    "message": "День"
+  }
+}

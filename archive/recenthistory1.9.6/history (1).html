@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>History | Recent History</title>
+<script type="text/javascript" src="scripts/moo.js"></script>
+<script type="text/javascript" src="scripts/func.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+if(chrome.i18n.getMessage("@@bidi_dir") == 'rtl'){
+  document.write('<link rel="stylesheet" href="css/history-rtl.css">');
+}else{
+  document.write('<link rel="stylesheet" href="css/history.css">');
+}
+// ]]>
+</script>
+</head>
+
+<body>
+<table id="main-table" cellpadding="0" cellspacing="0">
+	<tr>
+		<td id="logo"><img alt="Recent History" src="images/icon67.png"></td>
+		<td id="search">
+      <form id="rh-search-form" action="#">
+        <input id="rh-search" type="text" value=""><input id="rh-search-submit" type="submit" value=" "><span id="rh-clear-search"></span>
+      </form>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+      <div id="rh-bar">
+        <div>
+          <input id="date-select-prev" type="button" value="&lt;&lt;">
+            <span id="dsdi"></span>
+            <span id="dsmi"></span>
+            <select id="date-select-year"></select>
+          <input id="date-select-next" type="button" value="&gt;&gt;">
+          <div id="date-select-insert"></div>
+        </div>
+      </div>
+      <div id="rh-items-manager">
+        <div id="history-insert"></div>
+        <div id="search-history-insert"></div>
+      </div>
+		</td>
+	</tr>
+</table>
+<div id="loading-div">
+  <div id="loading-holder"></div>
+</div>
+</body>
+
+</html>

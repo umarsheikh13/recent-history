@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "Ostatnio odwiedzone strony"
+  },
+  "recentlyClosedTabs": {
+    "message": "Ostatnio zamknięte karty"
+  },
+  "showAllHistory": {
+    "message": "Pokaż całą historię"
+  },
+  "clearOnStartup": {
+    "message": "Czyść historię podczas uruchamiania programu"
+  },
+  "iconSize": {
+    "message": "Rozmiar ikony"
+  },
+  "language": {
+    "message": "Język"
+  },
+  "clearNotice": {
+    "message": "(Wyczyszczona zostanie jedynie historia odwiedzin tej wtyczki, nie historia przeglądarki)"
+  },
+  "clearRecentHistory": {
+    "message": "Wyczyść historię"
+  },
+  "save": {
+    "message": "Zachowaj"
+  },
+  "yes": {
+    "message": "Tak"
+  },
+  "no": {
+    "message": "Nie"
+  },
+  "width": {
+    "message": "Szerokość"
+  },
+  "search": {
+    "message": "Szukaj"
+  },
+  "order": {
+    "message": "Porządek:"
+  },
+  "mostVisited": {
+    "message": "Najczęściej odwiedzane"
+  },
+  "time": {
+    "message": "Godzina"
+  },
+  "recentBookmarks": {
+    "message": "Ostatnio otwarte zakładki"
+  },
+  "date": {
+    "message": "Data"
+  }
+}

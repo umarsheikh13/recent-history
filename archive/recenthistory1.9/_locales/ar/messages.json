@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "تاريخ التصفح الحديث"
+  },
+  "recentlyClosedTabs": {
+    "message": "التبويبات المغلقة حديثا"
+  },
+  "showAllHistory": {
+    "message": "عرض كل التاريخ"
+  },
+  "clearOnStartup": {
+    "message": "تنظيف تاريخ التصفح عند بدأ التشغيل"
+  },
+  "iconSize": {
+    "message": "حجم الأيقونة"
+  },
+  "language": {
+    "message": "اللغة"
+  },
+  "clearNotice": {
+    "message": "(هذا الخيار سينظف فقط تاريخ التصفح الحديث الخاص بالإضافة وليس تاريخ التصفح الفعلي الخاص بك)"
+  },
+  "clearRecentHistory": {
+    "message": "تنظيف تاريخ التصفح الحديث"
+  },
+  "save": {
+    "message": "حفظ"
+  },
+  "yes": {
+    "message": "نعم"
+  },
+  "no": {
+    "message": "لا"
+  },
+  "width": {
+    "message": "العرض"
+  },
+  "search": {
+    "message": "البحث"
+  },
+  "order": {
+    "message": "رتب"
+  },
+  "mostVisited": {
+    "message": "الأكثر زيارة"
+  },
+  "time": {
+    "message": "مرة"
+  },
+  "recentBookmarks": {
+    "message": "الإشارات المرجعية الأخيرة"
+  },
+  "date": {
+    "message": "تاريخ"
+  }
+}

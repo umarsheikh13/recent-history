@@ -1,0 +1,75 @@
+
+body {
+  background: url('../images/share-bg.png') repeat-x bottom;
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+
+#close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#wrapper {
+  display: block;
+  padding: 40px;
+}
+
+#wrapper table {
+  border-spacing: 0;
+  padding: 0;
+  width: 520px;
+}
+
+#wrapper table td {
+  vertical-align: top;
+}
+
+#wrapper table .one {
+  border-right: 1px solid #ccc;
+  width: 124px;
+}
+
+#wrapper table .two {
+  width: 386px;
+}
+
+#share-title, #share-url {
+  display: block;
+}
+
+#share-title {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#share-url {
+  display: block;
+  color: #666;
+}
+
+.inner {
+  display: block;
+  padding: 10px;
+}
+
+.tip-title {
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 4px #ddd;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  font-size: 12px;
+  display: block;
+  padding: 7px 9px;
+  color: #4d6a9f;
+}
+
+.tip-text {
+  display: none;
+}

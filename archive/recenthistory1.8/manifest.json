@@ -1,0 +1,25 @@
+{
+  "name": "Recent History",
+  "version": "1.8",
+  "minimum_chrome_version": "5.0",
+  "default_locale": "en",
+  "description": "This extension displays your recent history and recently closed tabs in a one click popup menu",
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "permissions": [
+    "tabs",
+    "history",
+    "bookmarks"
+  ],
+  "icons": {
+    "16": "images/icon16-other.png",
+    "19": "images/icon19-other.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "page_action": {
+    "default_icon": "images/icon19.png",
+    "default_popup": "popup.html"
+  }
+}

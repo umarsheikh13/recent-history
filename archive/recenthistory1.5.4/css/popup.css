@@ -1,0 +1,118 @@
+
+body {
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.time {
+  color: #888;
+}
+
+.title {
+  margin-left: 30px;
+  color: blue;
+}
+
+.favicon {
+  position: absolute;
+  left: 42px;
+  top: 2px;
+  height: 16px;
+  width: 16px;
+}
+
+.item {
+  color: #ccc;
+  position: relative;
+  display: block;
+  padding: 2px 0;
+  -webkit-border-radius: 3px;
+}
+
+.item:hover {
+  background-color: #ebeff9;
+}
+
+#upgradeinstall {
+  display: block;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+
+#upgradeinstall a {
+  color: red;
+  text-decoration: underline;
+}
+
+#showhistoryblock {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: blue;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+#showhistorylink {
+  float: right;
+}
+
+#insert {
+  overflow-x: hidden;
+}
+
+.rhtitle {
+  display: block;
+  padding-bottom: 5px;
+  background: url('../images/rhtitle-bg.gif') repeat-x center;
+}
+
+.rhtitle span {
+  color: #888;
+  background-color: #fff;
+  padding-right: 5px;
+}
+
+#rhpabout {
+  background: url('../images/rh-popup-about.gif') left center no-repeat;
+  display: block;
+  height: 16px;
+  width: 16px;
+  float: left;
+}
+
+#rhpoptions {
+  background: url('../images/rh-popup-options.gif') left center no-repeat;
+  display: block;
+  height: 16px;
+  width: 16px;
+  float: left;
+  margin-left: 3px;
+}
+
+#rhpmanager {
+  background: url('../images/rh-popup-manager.gif') left center no-repeat;
+  display: block;
+  height: 16px;
+  width: 16px;
+  float: left;
+  margin-left: 3px;
+}
+
+#rhpabout:hover, #rhpoptions:hover, #rhpmanager:hover {
+  background-position: right center;
+}

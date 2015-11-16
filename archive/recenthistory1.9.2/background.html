@@ -1,0 +1,299 @@
+<script type="text/javascript">
+
+/*
+ * Copyright (c) 2010 Umar Sheikh
+ *
+ * This Google Chrome extension, Recent History, was made 
+ * to be useful to users who want to access their history
+ * in a better way. No warranty is expressed or implied 
+ * and I accept no liability for any damages that may 
+ * ensue from the usage of this extension.
+ *
+ * Attribution-Noncommercial-No Derivative Works 3.0 Unported
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/
+ *
+ */
+
+// Time
+
+function timeNow(){
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  if(hours < 10){
+    hours = '0'+hours;
+  }
+  if(minutes < 10){
+    minutes = '0'+minutes;
+  }
+  return hours+':'+minutes;
+}
+
+
+// Current tab
+
+function currentTab(tab,id){
+  
+  chrome.pageAction.show(id);
+  chrome.pageAction.setIcon({tabId: id, path: 'images/'+localStorage['rh-icontype']+'.png'});
+  
+  if(tab.status == 'complete'){
+  
+    var time = timeNow();
+    var title = tab.title;
+    var url = tab.url;
+    var furl = 'chrome://favicon/'+url;
+    var history = localStorage['rh-history'];
+    var valid = (/^chrome\:\/\/(.*)/.test(url));
+    var validtwo = (/^chrome\-extension\:\/\/(.*)/.test(url));
+    
+    var check = history.split('@');
+    var checkstr = time+','+title+','+url+','+furl+','+id;
+    
+    if(title == 'New Tab' || title == '' || !title || title == undefined || valid || validtwo || check[0] == checkstr || check[0].split(',')[2] == url){
+      var dont = 'false';
+    }else{
+      var dont = 'true';
+    }
+    
+    if(dont == 'true'){
+      
+      title = title.replace(/\@/g,'&#64;');
+      title = title.replace(/\,/g,'&#44;');
+      url = url.replace(/\@/g,'%40');
+      url = url.replace(/\,/g,'%2C');
+      
+      if(furl !== undefined){
+        furl = furl.replace(/\@/g,'%40');
+        furl = furl.replace(/\,/g,'%2C');
+      }
+      
+      var tabi = time+','+title+','+url+','+furl+','+id+'@';
+      history = tabi+history;
+      localStorage['rh-history'] = history;
+    
+      history = localStorage['rh-history'].split('@');
+      
+      var cutoff = localStorage['rh-cutoff']*1;
+      var rh = '';
+      
+      if(history.length < cutoff){
+        cutoff = history.length;
+      }
+      
+      for(i=0;i<cutoff;i++){
+      
+        if(history[i].split(',').length > 1){
+          rh += history[i]+'@';
+        }
+      
+      }
+      localStorage['rh-history'] = rh;
+      localStorage['rh-historytwo'] = rh;
+      
+    }
+  
+  }
+  
+}
+
+
+// Closed tab
+
+function closedTab(id){
+
+  if(localStorage['rh-historyclosed']){
+  
+    var history = localStorage['rh-historytwo'].split('@');
+    var rhhc = localStorage['rh-historyclosed'];
+    var check = rhhc.split('@');
+    var checktwo = check[0].split(',')[2];
+    var tabi = '';
+    
+    for(var i in history){
+    
+      if(history[i].split(',').length > 1){
+      
+        var item = history[i].split(',');
+      
+        if(item[4] == id && item[2] !== checktwo){
+        
+          tabi = timeNow()+','+item[1]+','+item[2]+','+item[3]+','+item[4];
+          localStorage['rh-historyclosed'] = tabi+'@'+rhhc;
+          break;
+        
+        }
+      
+      }
+    
+    }
+    
+    rhhc = localStorage['rh-historyclosed'].split('@');
+    
+    var cutoff = localStorage['rh-cutoff']*1;
+    var rh = '';
+    
+    if(rhhc.length < cutoff){
+      cutoff = rhhc.length;
+    }
+    
+    for(i=0;i<cutoff;i++){
+    
+      if(rhhc[i].split(',').length > 1){
+        rh += rhhc[i]+'@';
+      }
+    
+    }
+    localStorage['rh-historyclosed'] = rh;
+
+  }
+
+}
+
+
+// Most visited init
+
+function mostVisitedInit(){
+
+  var mv = '';
+  var infmv = 45;
+  var r = 0;
+
+  chrome.history.search({text: '', maxResults: 0, startTime: (new Date()).getTime()-(28*24*3600*1000), endTime: (new Date()).getTime()}, function(hi){
+  
+    if(hi.length > 0){
+    
+      hi.sort(function(a,b){return b.visitCount - a.visitCount});
+      
+      for(i=0;i<999;i++){
+        
+        if(r == infmv){break;}
+        
+        if(hi[i] !== undefined){
+          
+          if((/^(http|https|ftp|ftps|file|chrome|chrome-extension)\:\/\/(.*)/).test(hi[i].title) == false && (/^(ftp|ftps|file|chrome|chrome-extension)\:\/\/(.*)/).test(hi[i].url) == false){
+        
+            var currentTime = new Date(hi[i].lastVisitTime);
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            if(hours < 10){hours = '0'+hours;}
+            if(minutes < 10){minutes = '0'+minutes;}
+            var time = hours+':'+minutes;
+          
+            var title = hi[i].title;
+            var url = hi[i].url;
+            var furl = 'chrome://favicon/'+hi[i].url;
+            
+            if(title == ''){
+              title = url;
+            }
+            
+            mv += '["'+url+'", "'+furl+'", "'+title.replace('"', '\"')+'", "'+time+'", "'+hi[i].visitCount+'"], ';
+            
+          r++;
+          }
+          
+        }
+
+      }
+      
+      localStorage['mv-cache'] = '['+mv+'[]]';
+      
+    }else{
+      localStorage['mv-cache'] = 'false';
+    }
+
+  });
+
+}
+
+
+// Default values
+
+var defaultValues = {
+  "rh-history": timeNow()+",Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@",
+  "rh-historytwo": timeNow()+",Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@",
+  "rh-historyclosed": timeNow()+",Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@",
+  "rh-itemsno": 20,
+  "rct-itemsno": 0,
+  "mv-itemsno": 0,
+  "mv-blocklist": "false",
+  "rh-historypage": "yes",
+  "rh-icontype": "icon19",
+  "rb-itemsno": 0,
+  "rh-date": "mm/dd/yyyy",
+  "rh-width": "275px",
+  "rh-cutoff": 100,
+  "rh-search": "yes",
+  "rh-list-order": "rh-order,rct-order,rb-order,mv-order",
+  "rh-time": "yes"
+};
+
+if(localStorage['rh-historytwo']){
+  localStorage.removeItem('rh-historytwo');
+}
+
+// Remove cache on startup
+//localStorage['rh-history'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+//localStorage['rh-historyclosed'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+
+for(var v in defaultValues){
+  if(!localStorage[v] || localStorage[v] == null || localStorage[v] == ''){
+    localStorage[v] = defaultValues[v];
+  }
+}
+
+
+// Listeners
+
+chrome.tabs.onUpdated.addListener(function(id,info,tab){currentTab(tab,id)});
+chrome.tabs.onRemoved.addListener(function(id){closedTab(id)});
+chrome.tabs.onCreated.addListener(function(tab){
+  if(localStorage['rh-historypage'] == 'yes' && tab.url == 'chrome://history/'){
+    chrome.tabs.update(tab.id, {url: 'history.html', selected: true}, function(){});
+  }
+});
+
+
+// Page action icon
+
+chrome.tabs.onCreated.addListener(function(tab){
+  chrome.pageAction.show(tab.id);
+});
+
+
+// Startup
+
+mostVisitedInit();
+
+chrome.windows.getAll({}, function(wins){
+  for(var i in wins){
+    if(wins[i].id !== undefined){
+      chrome.tabs.getAllInWindow(wins[i].id, function(tabs){
+        for(var n in tabs){
+          if(tabs[n].id !== undefined){
+            chrome.pageAction.show(tabs[n].id);
+            chrome.pageAction.setIcon({tabId: tabs[n].id, path: 'images/'+localStorage['rh-icontype']+'.png'});
+          }
+        }
+      });
+    }
+  }
+});
+
+
+// Google Analytics
+
+if(window.navigator.platform == 'Win32'){
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16300412-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = 'https://ssl.google-analytics.com/ga.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+}
+
+</script>

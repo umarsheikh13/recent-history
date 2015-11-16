@@ -1,0 +1,87 @@
+<script>
+
+// Time
+function timeNow(){
+
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  if(hours < 10){
+    hours = '0'+hours;
+  }
+  if(minutes < 10){
+    minutes = '0'+minutes;
+  }
+  return hours+':'+minutes;
+  
+}
+
+// Tab saving
+function tabDetails(tab){
+
+  if(tab.status == 'complete'){
+  
+    var time = timeNow();
+    var title = tab.title;
+    var url = tab.url;
+    var furl = tab.favIconUrl;
+    var history = localStorage['rh-history'];
+    var valid = (/^chrome\:\/\/(.*)/.test(url));
+
+    title = title.replace('@','&#64;');
+    title = title.replace(',','&#44;');
+    
+    if(title == 'New Tab' || valid){
+      var dont = 'false';
+    }else{
+      var dont = 'true';
+    }
+    
+    if(dont == 'true'){
+      
+      var tabi = time+','+title+','+url+','+furl+'@';
+      history = tabi+history;
+      localStorage['rh-history'] = history;
+    
+      history = localStorage['rh-history'].split('@');
+      
+      var item = '';
+      var rh = '';
+
+      for(i=0;i<20;i++){
+      
+        if(history[20-(i*1)] !== undefined){
+        
+          item = history[i].split(',');
+          
+          var time = item[0];
+          var title = item[1];
+          var url = item[2];
+          var furl = item[3];
+          rh += time+','+title+','+url+','+furl+'@';
+          
+        }
+      
+      }
+      
+      localStorage['rh-history'] = rh;
+    
+    }
+    
+  }
+  
+}
+
+// Default values
+if(!localStorage['rh-history'] || localStorage['rh-history'] == null || localStorage['rh-history'] == ''){
+  localStorage['rh-history'] = timeNow()+',Recent History,https://chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm,icon16@';
+}
+
+if(!localStorage['rh-itemsno'] || localStorage['rh-itemsno'] == null || localStorage['rh-itemsno'] == ''){
+  localStorage['rh-itemsno'] = 10;
+}
+
+// On tab update
+chrome.tabs.onUpdated.addListener(function(id, info, tab){tabDetails(tab)});
+
+</script>

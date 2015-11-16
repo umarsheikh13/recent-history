@@ -1,0 +1,38 @@
+
+body {
+  width: 275px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.time {
+  color: #888;
+}
+
+.title {
+  padding-left: 21px;
+  margin-left: 10px;
+}
+
+.item {
+  color: #ccc;
+  line-height: 20px;
+}
+
+#showhistoryblock {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: blue;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 5px;
+  padding-top: 5px;
+}

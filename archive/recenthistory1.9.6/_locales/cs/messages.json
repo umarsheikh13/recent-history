@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "Nedávná historie"
+  },
+  "recentlyClosedTabs": {
+    "message": "Nedávno zavřené karty"
+  },
+  "showAllHistory": {
+    "message": "Ukaž celou historii"
+  },
+  "clearOnStartup": {
+    "message": "Vymaž historii při startu"
+  },
+  "iconSize": {
+    "message": "Velikost ikon"
+  },
+  "language": {
+    "message": "Jazyk"
+  },
+  "clearNotice": {
+    "message": "(Tímto smažete jen vyrovnávací paměť rozšíření Nedávná historie, nikoliv svou skutečnou historii)"
+  },
+  "clearRecentHistory": {
+    "message": "Vymaž nedávnou historii"
+  },
+  "save": {
+    "message": "Uložit"
+  },
+  "yes": {
+    "message": "Ano"
+  },
+  "no": {
+    "message": "Ne"
+  },
+  "width": {
+    "message": "šířka"
+  },
+  "search": {
+    "message": "Hledat"
+  },
+  "order": {
+    "message": "Pořadí"
+  },
+  "mostVisited": {
+    "message": "Nejnavštěvovanější"
+  },
+  "time": {
+    "message": "Čas"
+  },
+  "recentBookmarks": {
+    "message": "Nedávné Záložky"
+  },
+  "date": {
+    "message": "Datum"
+  }
+}

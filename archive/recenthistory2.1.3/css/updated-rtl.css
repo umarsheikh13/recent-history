@@ -1,0 +1,18 @@
+
+body {
+  text-align: right;
+  direction: rtl;
+}
+
+#icon, #title, #description {
+  float: right;
+}
+
+#title {
+  margin-right: 10px;
+}
+
+#description {
+  display: block;
+  margin: 3px 10px 0 0;
+}

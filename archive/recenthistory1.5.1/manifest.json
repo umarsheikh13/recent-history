@@ -1,0 +1,20 @@
+{
+  "name": "Recent History",
+  "version": "1.5.1",
+  "description": "Displays your recent history in a one click menu like Firefox",
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "permissions": [
+    "tabs"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "19": "images/icon19.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "page_action": {
+    "popup": "popup.html"
+  }
+}

@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Options | Recent History</title>
+<script type="text/javascript" src="scripts/moo.js"></script>
+<script type="text/javascript" src="scripts/func.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+if(chrome.i18n.getMessage("@@bidi_dir") == 'rtl'){
+  document.write('<link rel="stylesheet" href="css/options-rtl.css">');
+}else{
+  document.write('<link rel="stylesheet" href="css/options.css">');
+}
+window.addEvent('domready', function(){
+  $('save').set('value', chrome.i18n.getMessage("save"));
+});
+// ]]>
+</script>
+</head>
+
+<body>
+<img id="move-hint" alt="Move Hint" src="images/move-hint.gif">
+<div id="options-status"></div>
+<div id="options">
+  <div id="options-tube">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="left" valign="top">
+          <img alt="Icon" src="images/icon48.png">
+        </td>
+        <td id="right" valign="top">
+          <div id="options-content">
+            <form id="options-form" action="#">
+              <label for="itemsno"><script type="text/javascript">document.write(chrome.i18n.getMessage("recentHistory"));</script></label>
+              <br>
+              <input onblur="checkON(this,0,30)" type="text" style="width:50px;" name="itemsno" id="itemsno" value="">
+              <br>
+              <br>
+              <label for="rctitemsno"><script type="text/javascript">document.write(chrome.i18n.getMessage("recentlyClosedTabs"));</script></label>
+              <br>
+              <input onblur="checkON(this,0,30)" type="text" style="width:50px;" name="rctitemsno" id="rctitemsno" value="">
+              <br>
+              <br>
+              <label for="rbitemsno"><script type="text/javascript">document.write(chrome.i18n.getMessage("recentBookmarks"));</script></label>
+              <br>
+              <input onblur="checkON(this,0,30)" type="text" style="width:50px;" name="rbitemsno" id="rbitemsno" value="">
+              <br>
+              <br>
+              <label for="mvitemsno"><script type="text/javascript">document.write(chrome.i18n.getMessage("mostVisited"));</script></label>
+              <br>
+              <input onblur="checkON(this,0,30)" type="text" style="width:50px;" name="mvitemsno" id="mvitemsno" value="">
+              <br>
+              <br>
+              <label id="rhlistordertitle"><script type="text/javascript">document.write(chrome.i18n.getMessage("order"));</script></label>
+              <br>
+              <ul id="rhlistorder"></ul>
+              <label id="mvblocklist"><script type="text/javascript">document.write(chrome.i18n.getMessage("mostVisited"));</script></label>
+              <ul id="mv-blocklist"></ul>
+              <br>
+              <label for="rhwidth"><script type="text/javascript">document.write(chrome.i18n.getMessage("width"));</script></label>
+              <br>
+              <input onblur="checkON(this,225,3000)" type="text" style="width:50px;" name="rhwidth" id="rhwidth" value=""> px
+              <br>
+              <br>
+              <label for="rhsearch"><script type="text/javascript">document.write(chrome.i18n.getMessage("search"));</script></label>
+              <br>
+              <select name="rhsearch" id="rhsearch">
+                <option value="yes"><script type="text/javascript">document.write(chrome.i18n.getMessage("yes"));</script></option>
+                <option value="no"><script type="text/javascript">document.write(chrome.i18n.getMessage("no"));</script></option>
+              </select>
+              <br>
+              <br>
+              <label for="rhdate"><script type="text/javascript">document.write(chrome.i18n.getMessage("date"));</script></label>
+              <br>
+              <select name="rhdate" id="rhdate">
+                <option value="mm/dd/yyyy">mm/dd/yyyy</option>
+                <option value="dd/mm/yyyy">dd/mm/yyyy</option>
+              </select>
+              <br>
+              <br>
+              <label for="rhtime"><script type="text/javascript">document.write(chrome.i18n.getMessage("time"));</script></label>
+              <br>
+              <select name="rhtime" id="rhtime">
+                <option value="yes"><script type="text/javascript">document.write(chrome.i18n.getMessage("yes"));</script></option>
+                <option value="no"><script type="text/javascript">document.write(chrome.i18n.getMessage("no"));</script></option>
+              </select>
+              <br>
+              <br>
+              <input type="button" id="save" name="save" value="Save">
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="options-footer"></div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Google Pac-Man | Recent History</title>
+<style type="text/css">
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 554px;
+  height: 186px;
+  background-color: #000;
+  position: relative;
+  margin-bottom: 9px
+}
+
+#logo-l {
+  width: 200px;
+  height: 2px;
+  left: 177px;
+  top: 157px;
+  background-color: #990;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+}
+
+#logo-b {
+  position: absolute;
+  left: 0;
+  background-color: #ff0;
+  height: 8px;
+  width: 0;
+}
+
+#wrapper {
+  width: 554px;
+  height: 186px;
+  background-color: #000;
+}
+
+</style>
+<script type="text/javascript">
+
+function pacmanInit(){
+
+	window.google = {};
+	google.dom = {};
+	google.pacManSound = true;
+	google.browser = {};
+	google.browser.engine = {};
+	
+	google.dom.remove = function(a){
+    return a && a.parentNode && a.parentNode.removeChild(a);
+	};
+	
+	google.dom.append = function(a){
+    return document.body.appendChild(a);
+	};
+	
+	google.browser.engine.IE = false;
+	google.pml = function(){
+	  function d(a){
+	    if(!google.pml_installed){
+	      google.pml_installed = true;
+	      if(!a){
+	        document.getElementById("logo").style.background = "black";
+	        window.setTimeout(function(){
+	          var b = document.getElementById("logo-l");
+	          if(b) b.style.display = "block";
+	        }, 400);
+	      }
+	      a = document.createElement("script");
+	      a.type = "text/javascript";
+	      a.src = "src/js/pacman10-hp.3.js";
+	      document.body.appendChild(a)
+	    }
+	  }
+	  if(!google.pml_loaded){
+	    google.pml_loaded = true;
+	    window.setTimeout(function(){
+	      document.f && d(true);
+	    }, 1E4);
+      d(false);
+	  }
+	};
+	
+	google.pml && google.pml();
+	
+}
+
+</script>
+</head>
+
+<body onload="pacmanInit()">
+<div id="wrapper">
+<a href="#gameover" id="dlink"></a>
+<div id="logo" title="PAC-MAN's 30th Birthday! Doodle with PAC-MAN™ & ©1980 NAMCO BANDAI Games Inc.">
+	<div id="logo-l">
+		<div id="logo-b"></div>
+	</div>
+</div>
+</div>
+</body>
+
+</html>

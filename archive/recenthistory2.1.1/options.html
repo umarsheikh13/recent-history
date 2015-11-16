@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Options | Recent History</title>
+<link rel="stylesheet" href="css/options.css">
+<script type="text/javascript">
+// <![CDATA[
+if(chrome.i18n.getMessage("@@bidi_dir") == 'rtl' && chrome.i18n.getMessage("@@ui_locale") !== 'en'){
+  document.write('<link rel="stylesheet" href="css/options-rtl.css">');
+}
+// ]]>
+</script>
+<script type="text/javascript" src="scripts/moo.js"></script>
+<script type="text/javascript" src="scripts/func.js"></script>
+<script type="text/javascript" src="scripts/options.js"></script>
+</head>
+
+<body>
+  <form style="position:absolute; top:10px; right:5px;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+  <input type="image" src="images/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+  <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+  </form>
+  <img id="logo" alt="Recent History" src="images/logo.png">
+  <div id="options">
+    <div id="options-tabs">
+      <a id="tab-options" class="tab" href="#"><span><script type="text/javascript">echoLang("options");</script></span></a>
+      <a id="tab-twitter" class="tab" href="#"><span>Twitter</span></a>
+      <a id="tab-translations" class="tab" href="#"><span><script type="text/javascript">echoLang("translations");</script></span></a>
+      <a id="tab-changelog" class="tab" href="#"><span>Changelog</span></a>
+      <a id="tab-about" class="tab" href="#"><span>&nbsp;</span></a>
+    </div>
+    <div class="tab-content" id="tab-options-content">
+      <h2 style="margin-top:0;"><script type="text/javascript">echoLang("mainOptions");</script></h2>
+      <form id="main-options" action="#">
+        <table>
+          <tr>
+            <td class="cell-left"><label for="rhitemsno"><script type="text/javascript">echoLang("option1");</script></label><img id="help1" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><input style="width:45px;" type="text" id="rhitemsno" name="rhitemsno" value=""><div id="rhitemsno-slider" class="slider"><div id="rhitemsno-slider-handle" class="handle"></div></div></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rctitemsno"><script type="text/javascript">echoLang("option2");</script></label><img id="help2" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><input style="width:45px;" type="text" id="rctitemsno" name="rctitemsno" value=""><div id="rctitemsno-slider" class="slider"><div id="rctitemsno-slider-handle" class="handle"></div></div></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="mvitemsno"><script type="text/javascript">echoLang("option3");</script></label><img id="help3" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><input style="width:45px;" type="text" id="mvitemsno" name="mvitemsno" value=""><div id="mvitemsno-slider" class="slider"><div id="mvitemsno-slider-handle" class="handle"></div></div></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rbitemsno"><script type="text/javascript">echoLang("option4");</script></label><img id="help4" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><input style="width:45px;" type="text" id="rbitemsno" name="rbitemsno" value=""><div id="rbitemsno-slider" class="slider"><div id="rbitemsno-slider-handle" class="handle"></div></div></td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr>
+            <td class="cell-left"><label><script type="text/javascript">echoLang("option5");</script></label><img id="help5" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <ul id="rhlistorder"></ul>
+            </td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr>
+            <td class="cell-left"><label for="rhhistorypage"><script type="text/javascript">echoLang("option6");</script></label><img id="help6" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhhistorypage" id="rhhistorypage">
+                <option value="yes">chrome-extension://history/</option>
+                <option value="no">chrome://history/</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhdate"><script type="text/javascript">echoLang("option7");</script></label><img id="help7" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhdate" id="rhdate">
+                <option value="mm/dd/yyyy">mm/dd/yyyy</option>
+                <option value="dd/mm/yyyy">dd/mm/yyyy</option>
+                <option value="yyyy/mm/dd">yyyy/mm/dd</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhtime"><script type="text/javascript">echoLang("option20");</script></label><img id="help20" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhtime" id="rhtime">
+                <option value="12"><script type="text/javascript">echoLang("12hour");</script></option>
+                <option value="24"><script type="text/javascript">echoLang("24hour");</script></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhsearch"><script type="text/javascript">echoLang("option8");</script></label><img id="help8" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhsearch" id="rhsearch">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhshare"><script type="text/javascript">echoLang("option21");</script></label><img id="help21" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhshare" id="rhshare">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <h2><script type="text/javascript">echoLang("styleOptions");</script></h2>
+      <form id="style-options" action="#">
+        <table>
+          <tr>
+            <td class="cell-left"><label><script type="text/javascript">echoLang("option9");</script></label></td>
+            <td class="cell-right">
+              <a href="javascript:void(0);" id="rhitemstyle">
+                <img id="rhitemstyle-icon" alt="Favicon" src="images/preview-icon.gif">
+                <span id="rhitemstyle-title" title="Recent History - Google Chrome extension gallery">Recent History - Google Chrome extension gallery</span>
+                <span id="rhitemstyle-infourl"><span id="rhitemstyle-info"><script type="text/javascript">echoLang("visits");</script>: 3<span id="rhitemstyle-sep"> | </span></span><span id="rhitemstyle-url">chrome.google.com/extensions/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm</span></span>
+              </a>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhsshowurl"><script type="text/javascript">echoLang("option10");</script></label><img id="help10" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhsshowurl" id="rhsshowurl">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhsshowsep"><script type="text/javascript">echoLang("option11");</script></label><img id="help11" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhsshowsep" id="rhsshowsep">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhsshowext"><script type="text/javascript">echoLang("option12");</script></label><img id="help12" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhsshowext" id="rhsshowext">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhsshowbg"><script type="text/javascript">echoLang("option13");</script></label><img id="help13" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhsshowbg" id="rhsshowbg">
+                <option value="yes"><script type="text/javascript">echoLang("yes");</script></option>
+                <option value="no"><script type="text/javascript">echoLang("no");</script></option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr>
+            <td class="cell-left"><label><script type="text/javascript">echoLang("option14");</script></label></td>
+            <td class="cell-right" id="rhicontype"><label><input type="radio" name="icon" value="icon19"><img alt="icon19" src="images/icon19.png"></label> <label><input type="radio" name="icon" value="icon19-arrow"><img alt="icon19-arrow" src="images/icon19-arrow.png"></label> <label><input type="radio" name="icon" value="icon19-arrowbox"><img alt="icon19-arrowbox" src="images/icon19-arrowbox.png"></label> <label><input type="radio" name="icon" value="icon19-neat"><img alt="icon19-neat" src="images/icon19-neat.png"></label> <label><input type="radio" name="icon" value="icon19-edge"><img alt="icon19-edge" src="images/icon19-edge.png"></label> <label><input type="radio" name="icon" value="icon19-down"><img alt="icon19-down" src="images/icon19-down.png"></label> <label><input type="radio" name="icon" value="icon19-pink"><img alt="icon19-pink" src="images/icon19-pink.png"></label> <label><input type="radio" name="icon" value="icon19-circle"><img alt="icon19-circle" src="images/icon19-circle.png"></label></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhwidth"><script type="text/javascript">echoLang("option15");</script></label></td>
+            <td class="cell-right"><input style="width:45px;" type="text" id="rhwidth" name="rhwidth" value=""><div id="rhwidth-slider" class="slider"><div id="rhwidth-slider-handle" class="handle"></div></div></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label for="rhtheme"><script type="text/javascript">echoLang("option19");</script></label></td>
+            <td class="cell-right">
+              <select name="rhtheme" id="rhtheme">
+                <option value="original"><script type="text/javascript">echoLang("original");</script></option>
+                <option value="classic"><script type="text/javascript">echoLang("classic");</script></option>
+                <option value="pink"><script type="text/javascript">echoLang("pink");</script></option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <h2><script type="text/javascript">echoLang("advanceOptions");</script></h2>
+      <form id="advance-options" action="#" onsubmit="return false">
+        <table>
+          <tr>
+            <td class="cell-left"><label><script type="text/javascript">echoLang("option16");</script></label><img id="help16" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><div id="mvlist"><table id="mvlist-table"></table></div></td>
+          </tr>
+          <tr>
+            <td class="cell-left"><label><script type="text/javascript">echoLang("option17");</script></label><img id="help17" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right"><div id="flist"><table id="flist-table"></table></div><input id="flist-add-i" onkeyup="if(event.keyCode == 13){addFilteredItem();}" style="width:200px;" type="text" value=""><input id="flist-add-b" onclick="addFilteredItem()" type="button" value=" + "></td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr>
+            <td class="cell-left"><label for="rhclick"><script type="text/javascript">echoLang("option18");</script></label><img id="help18" title="" class="help-tip" alt="Help" src="images/help.png"></td>
+            <td class="cell-right">
+              <select name="rhclick" id="rhclick">
+                <option value="current"><script type="text/javascript">echoLang("click1");</script></option>
+                <option value="newtab"><script type="text/javascript">echoLang("click2");</script></option>
+                <option value="newbgtab"><script type="text/javascript">echoLang("click3");</script></option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <h2>&nbsp;</h2>
+      <div id="save-holder"><input id="save" type="button" value=""></div>
+    </div>
+    <div class="tab-content" id="tab-twitter-content">
+      <div id="twitter-text">Follow me on <a href="http://twitter.com/RecentHistory_">Twitter</a> / @<a href="http://twitter.com/RecentHistory_">RecentHistory_</a></div>
+      <div id="twitter-insert">Loading...</div>
+    </div>
+    <div class="tab-content" id="tab-translations-content">
+    <script type="text/javascript">echoLang("translation1");</script>
+    <br><br>
+    <script type="text/javascript">echoLang("translation2");</script>
+    <ol>
+      <li><script type="text/javascript">echoLang("translation3");</script></li>
+      <li><script type="text/javascript">echoLang("translation4");</script></li>
+      <li><script type="text/javascript">echoLang("translation5");</script></li>
+      <li><script type="text/javascript">echoLang("translation6");</script></li>
+      <li><script type="text/javascript">echoLang("translation7");</script></li>
+    </ol>
+    <div id="translations-iframe"></div>
+    </div>
+    <div class="tab-content" id="tab-changelog-content">
+      You can view the latest and past changes of Recent History below:
+      <p><b>2.1.1 (2011/05/09) - Added new translations, Portuguese (JÃºnior Messias), Indonesian (Sahya), French (DARÃ‰ Mathieu) and Spanish (Leo DÃ­az/Darkson). Fixed issue of vertical scrollbar hiding icons in the pop-up window. Fixed issue of long unresponsive loading times of the history page.</b></p>
+      <p><b>2.1 (2011/04/25)</b> - Added new translations, Russian (The DimoK), Korean (-SuNYouNgSaRaNg-) and Chinese (jason_jiang). Better support for languages which read from right to left has been added. You can now delete history from a specific date range by opening the calendar. Dates have been added to the changelog. More sorting options have been added to the history page. A custom share pop-up has been created for better usability. You can now middle click items in the pop-up. The date format (yyyy/mm/dd) has been added. The UI of the history page has been tweaked a little to give you a better experience. Finally an fun Easter Egg has been added, can you find it?</p>
+      <p>
+        <b>2.0 (2011/04/14)</b>
+        - Majority of the extension’s code has been rewritten making it far better than previous versions. Every aspect of Recent History has been improved in some way. Please read the list below for all changes made to Recent History.
+        <br><br>
+        <b>Pop-up:</b><br>
+        -	Tweaked layout and added a bit of colour.<br>
+        -	You can now change the theme of the pop-up.<br>
+        -	The search has been upgraded to instant search.<br>
+        -	Time has been removed as it is irrelevant.<br>
+        -	Items can be pinned, deleted and shared.<br>
+        -	You can change the style of the items.<br>
+        -	More icons have been added.<br>
+        -	You can now filter domains you do not want to see in the recent history list.<br>
+        -	The left click function can now be changed.
+        <br><br>
+        <b>Options Page:</b><br>
+        -	The options page has been overhauled with a new design and UI.<br>
+        -	Added a twitter page so you can keep up to date with what’s going on.<br>
+        -	Added a translations page so you can easily send new or better translations directly.
+        <br><br>
+        <b>History Page:</b><br>
+        -	The history page now also has instant search.<br>
+        -	You can choose what you would like to search.<br>
+        -	A Google web history styled calendar has been added for easier navigation.<br>
+        -	You can now shift select items for deleting.<br>
+        - Items can now be grouped according to domain names.
+      </p>
+      <p><b>1.9.6 (2011/02/04)</b> - Fixed issue of the middle-click function not working in the new stable release of chrome (9.0.597.84).</p>
+      <p><b>1.9.4 (2011/01/17)</b> - Fixed issue of the most visited list not being displayed. If this release is an upgrade for you then please restart Chrome for the fix to be applied.</p>
+      <p><b>1.9.3 (2010/12/29)</b> - Fixed a few bugs and cleaned up the code a little.</p>
+      <p><b>1.9.2 (2010/12/22)</b> - You can choose what icon you would like in the address bar for Recent History in the options page. Items which have been bookmarked will show a star next them in the history page. The middle-click function has been changed back so when you middle-click an item in the popup window the item opens in a new tab in the background and leaves the popup open.</p>
+      <p><b>1.9.1 (2010/12/20)</b> - Fixed a few bugs with the most visited list. The new history page is the default history manager but this can be changed in options. The new history page shows more search items from the past and not just from your recent history. A few things from the options page have been changed.</p>
+      <p><b>1.9 (2010/12/16)</b> - A brand new history page has been made which can be accessed by clicking on the "Show All History" link. Polish translation has been added, thanks to the person who commented. When you left click an item in the popup menu it opens in the current tab and if you middle click the item, it will open up in a new tab. When the popup or the history page is opened the search bar is focused so you search without clicking on the search field. The recently closed tabs history isn't deleted upon new browser session any more. When you hover over a recent history or most visited item you will be able to see the visit count for that URL. The most visited history items are now gathered from the past 4 weeks which should give you an accurate list of most visited URLs. You can also remove the URLs you do not want to show up in the most visited list in the options page. The popup should open up slightly quicker after you open it the first time. Lastly a few minor changes have been made here and there.</p>
+      <p><b>1.8.2 (2010/06/11)</b> - Fixed issue of the extension causing a high cpu load on some systems like Mac OS and Linux. Please make sure your using the latest stable version of Chrome.</p>
+      <p><b>1.8.1 (2010/06/06)</b> - Fixed issue of time being displayed even if the option is switched off.</p>
+      <p><b>1.8 (2010/06/06)</b> - Added new history API so the recent history you see is from chrome's actual history. This extension still needs to track your history for recently closed tabs however. I've added a recent bookmarks section also. Some options had to be removed due to either it not being allowed, better efficient coding and mainly due to the addition of chrome 5 APIs. Languages are still supported, however the only way you can use them is to install the locale version of chrome. This is the official way to support localization in chrome extensions. The history manager has been removed for now however I'm working on another new one which will act as your default history page.</p>
+      <p><b>1.7.4 (2010/05/25)</b> - Fixed issue of no favicons and titles showing up.</p>
+      <p><b>1.7.3 (2010/05/22)</b> - Added Portuguese translation (thanks to Maicon), the option to remove the time in the popup menu and increased limit for history items from 20 to 30.</p>
+      <p><b>1.7.2 (2010/05/09)</b> - Fixed issue of popup menu not showing up and recent history items being repeated. Added Arabic translation and corrected the Russian translation thanks to the guys who commented.</p>
+      <p><b>1.7.1 (2010/04/27)</b> - Fixed clear extension cache button on the popup menu.</p>
+      <p><b>1.7 (2010/04/25)</b> - Added most visited links, option to order the sections for the popup menu, option to remove the search box and a button on the menu to clear extension cache. You can now also input your own values in the options page. Fixed the search clear button being hidden by the scroll bar and fixed issue of repeated history items in the recently closed tabs section. Lastly the extension is now able to record your browsing history item before the page is fully loaded.</p>
+      <p><b>1.6 (2010/03/09)</b> - Added a search feature in the popup menu and you can now view a maximum of 100 history items in the history manager. Also fixed the issue of popup menu not showing up due to favicon url being in a restricted area (i.e. you have to be logged in).</p>
+      <p><b>1.5.4 (2010/02/28)</b> - Added "right click copy url" function when you right click on a history item in the popup menu. Increased maximum number of history items from 50 to 100. You can now show more recently closed tabs in the popup menu. Tips now show both title and url. Fixed "Recently closed tabs" section displaying wrong title/url.</p>
+      <p><b>1.5.3 (2010/02/26)</b> - Added Russian translation thanks to the person who commented.</p>
+      <p><b>1.5.2 (2010/02/25)</b> - Fixed issue of page going to the top after deleting history item and missing "Icon Size" translation text.</p>
+      <p><b>1.5.1 (2010/02/25)</b> - Fixed issue of not being able to delete history items with blank favicons.</p>
+      <p><b>1.5 (2010/02/24)</b> - Added a Recent History Manager which allows you to delete history items and search through them, buttons to the popup menu, Czech translation, option to change your icon and option to change width. Fixed utf-8 issue for some of the files.</p>
+      <p><b>1.4.1 (2010/02/18)</b> - Changed icon, thanks to the user who sent it to me and gave me the idea. Added German translation and updated the French translation, thanks to the guys who commented below.</p>
+      <p><b>1.4 (2010/02/11)</b> - Changed logo. Moved icon into the omnibar and you can choose what size icon you want to use. Added different language support and a blue background colour when hovering over a history item.</p>
+      <p><b>1.3.3 (2010/02/08)</b> - Added a new size icon, 19px x 19px (which is the size most extensions are using).</p>
+      <p><b>1.3.2 (2010/02/08)</b> - Fixed recently closed tabs cache for new users.</p>
+      <p><b>1.3.1 (2010/02/08)</b> - Fixed clear history on startup error.</p>
+      <p><b>1.3 (2010/02/08)</b> - Added option to clear history on startup. Fixed large favicons issue.</p>
+      <p><b>1.2.4 (2010/02/03)</b> - Fixed "Clear History" issue and added recent history title when recently closed tabs are disabled.</p>
+      <p><b>1.2.3 (2010/02/03)</b> - Fixed recently closed tabs cache from previous use of chrome.</p>
+      <p><b>1.2.2 (2010/02/03)</b> - Fixed recently closed tabs. It will reset every time you open up chrome.</p>
+      <p><b>1.2.1 (2010/02/03)</b> - Added 128px icon.</p>
+      <p><b>1.2 (2010/02/03)</b> - Fixed text padding on right hand side. Added "Recently Closed Tabs" section with the option to change the items number for it and disable it altogether. Fixed a few bugs and issues here and there.</p>
+      <p><b>1.1 (2010/02/02)</b> - No more duplicate history items.</p>
+    </div>
+    <div class="tab-content" id="tab-about-content">
+      <h2 style="margin-top:0;"><script type="text/javascript">echoLang("about");</script></h2>
+      <p id="rh-about-extension"><script type="text/javascript">echoLang("aboutText");</script></p>
+      <p>
+        <b>Recent History: </b><script type="text/javascript">document.write(getVersion());</script><br>
+        <b>Author: </b>Umar Sheikh<br>
+        <b>Extension Page: </b><a href="https://chrome.google.com/webstore/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm">https://chrome.google.com/webstore/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm</a><br>
+        <b>Website: </b><a href="http://www.indezinez.com/chrome-extensions/recent-history/">http://www.indezinez.com/chrome-extensions/recent-history/</a><br>
+        <b>Feedback: </b><a href="https://chrome.google.com/webstore/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm">https://chrome.google.com/webstore/detail/fbmkfdfomhhlonpbnpiibloacemdhjjm</a><br>
+        <b>Contact: </b><a href="http://www.indezinez.com/contact/">http://www.indezinez.com/contact/</a><br>
+        <b>Doodle: </b>PAC-MAN's 30th Birthday! Doodle with PAC-MAN™ & ©1980 NAMCO BANDAI Games Inc.<br>
+        <b>Social Icons: </b><a href="http://komodomedia.com">komodomedia.com</a>
+      </p>
+      <h2><script type="text/javascript">echoLang("tips");</script></h2>
+      <ol>
+        <li><script type="text/javascript">echoLang("tip1");</script></li>
+        <li><script type="text/javascript">echoLang("tip2");</script></li>
+        <li><script type="text/javascript">echoLang("tip3");</script></li>
+        <li><script type="text/javascript">echoLang("tip4");</script></li>
+        <li><script type="text/javascript">echoLang("tip5");</script></li>
+        <li><script type="text/javascript">echoLang("tip6");</script></li>
+      </ol>
+    </div>
+  </div>
+</body>
+
+</html>

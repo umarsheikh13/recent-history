@@ -1,0 +1,63 @@
+
+body {
+  width: 275px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.time {
+  color: #888;
+}
+
+.title {
+  margin-left: 30px;
+}
+
+.favicon {
+  background-color: #fff;
+  position: absolute;
+  left: 42px;
+  top: 0.5px;
+  height: 16px;
+  width: 16px;
+}
+
+.item {
+  color: #ccc;
+  line-height: 20px;
+  position: relative;
+}
+
+#showhistoryblock {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: blue;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+#insert {
+  overflow-x: hidden;
+}
+
+.rhtitle {
+  display: block;
+  padding-bottom: 5px;
+  background: url('../images/rhtitle-bg.gif') repeat-x center;
+}
+
+.rhtitle span {
+  color: #888;
+  background-color: #fff;
+  padding-right: 5px;
+}

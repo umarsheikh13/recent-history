@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "Recent History"
+  },
+  "recentlyClosedTabs": {
+    "message": "Recently Closed Tabs"
+  },
+  "showAllHistory": {
+    "message": "Show All History"
+  },
+  "clearOnStartup": {
+    "message": "Clear History on Startup"
+  },
+  "iconSize": {
+    "message": "Icon Size"
+  },
+  "language": {
+    "message": "Language"
+  },
+  "clearNotice": {
+    "message": "(This will only clear the Recent History extension's cache not your actual history)"
+  },
+  "clearRecentHistory": {
+    "message": "Clear Recent History"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "yes": {
+    "message": "Yes"
+  },
+  "no": {
+    "message": "No"
+  },
+  "width": {
+    "message": "Width"
+  },
+  "search": {
+    "message": "Search"
+  },
+  "order": {
+    "message": "Order"
+  },
+  "mostVisited": {
+    "message": "Most Visited"
+  },
+  "time": {
+    "message": "Time"
+  },
+  "recentBookmarks": {
+    "message": "Recent Bookmarks"
+  },
+  "date": {
+    "message": "Date"
+  }
+}

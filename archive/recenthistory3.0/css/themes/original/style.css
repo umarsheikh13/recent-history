@@ -1,0 +1,9 @@
+
+body {
+  background-image: url('bg.gif');
+}
+
+.popup-title span {
+  font-weight: bold;
+  color: #333;
+}

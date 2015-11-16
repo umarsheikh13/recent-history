@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Popup | Recent History</title>
+<link rel="stylesheet" href="css/popup.css">
+<script type="text/javascript" src="scripts/moo.js"></script>
+<script type="text/javascript" src="scripts/func.js"></script>
+<script type="text/javascript" src="scripts/popup.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var theme = localStorage['rh-theme'];
+if(theme !== 'classic'){
+  document.write('<link rel="stylesheet" href="css/themes/'+theme+'/style.css">');
+}
+// ]]>
+</script>
+</head>
+
+<body>
+  <div id="popup">
+    <div id="popup-header">
+      <form id="popup-search" action="#" method="get">
+        <input id="popup-search-input" type="text" name="q" value="">
+        <a id="popup-search-clear" href="javascript:void(0);"></a>
+      </form>
+    </div>
+    <div id="popup-insert"></div>
+    <div id="popup-search-insert"></div>
+    <div id="popup-footer">
+      <div id="popup-footer-left">
+        <a href="options.html" target="_blank"></a>
+      </div>
+      <div id="popup-footer-right">
+        <a href="javascript:void(0);" onclick="chromeURL('chrome://history/')"><script type="text/javascript">echoLang('showAllHistory');</script></a>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+<div id="alert-holder">
+  <div id="alert">
+    <div id="alert-text"></div>
+  </div>
+</div>
+</body>
+
+</html>

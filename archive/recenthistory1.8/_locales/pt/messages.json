@@ -1,0 +1,56 @@
+{
+  "recentHistory": {
+    "message": "Histórico Recente"
+  },
+  "recentlyClosedTabs": {
+    "message": "Tabs Fechadas Recentemente"
+  },
+  "showAllHistory": {
+    "message": "Mostrar todo o Histórico"
+  },
+  "clearOnStartup": {
+    "message": "Limpara Histórico ao Iniciar"
+  },
+  "iconSize": {
+    "message": "Tamanho do Ícone"
+  },
+  "language": {
+    "message": "Língua"
+  },
+  "clearNotice": {
+    "message": "(Isso limpará somente o Histórico Recente da extenção, não seu histórico atual)"
+  },
+  "clearRecentHistory": {
+    "message": "Limpar o Histórico Recente"
+  },
+  "save": {
+    "message": "Salvar"
+  },
+  "yes": {
+    "message": "Sim"
+  },
+  "no": {
+    "message": "Não"
+  },
+  "width": {
+    "message": "Largura"
+  },
+  "search": {
+    "message": "Buscar"
+  },
+  "order": {
+    "message": "Ordenar"
+  },
+  "mostVisited": {
+    "message": "Mais Vistos"
+  },
+  "time": {
+    "message": "Tempo"
+  },
+  "recentBookmarks": {
+    "message": "Bookmarks recentes"
+  },
+  "date": {
+    "message": "Data"
+  }
+}

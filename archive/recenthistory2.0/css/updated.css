@@ -1,0 +1,25 @@
+
+body {
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: small;
+}
+
+#icon, #title, #description {
+  display: block;
+  float: left;
+}
+
+#title {
+  font-weight: bold;
+  display: block;
+  margin-left: 10px;
+}
+
+#description {
+  display: block;
+  margin: 3px 0 0 10px;
+}
+
+#version {
+  color: #666;
+}
