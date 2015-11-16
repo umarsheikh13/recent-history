@@ -1,7 +1,7 @@
 {
   "name": "recenthistory",
   "version": "3.0.3",
-  "description": "This extension displays your recent history, recently closed tabs, most visited pages and recent bookmarks in a one click pop-up.",
+  "description": "A chrome extension which displays your history in a pop-up.",
   "main": "manifest.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
