@@ -4,11 +4,11 @@ This extension displays your recent history, recently closed tabs, most visited 
 
 ## Versions
 
-### Awesomebar
+#### Awesomebar
 
 https://chrome.google.com/webstore/detail/recent-history/fbmkfdfomhhlonpbnpiibloacemdhjjm
 
-### Toolbar
+#### Toolbar
 
 https://chrome.google.com/webstore/detail/milbdjfbgdilllphgdmlahonjodlfokh
 
