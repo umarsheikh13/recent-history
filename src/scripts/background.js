@@ -43,45 +43,45 @@ var mostVisitedInit = function(){
   var r = 0;
 
   chrome.history.search({text: '', maxResults: 0, startTime: (new Date()).getTime()-(28*24*3600*1000), endTime: (new Date()).getTime()}, function(hi){
-  
+
     if(hi.length > 0){
-    
+
       hi.sort(function(a,b){return b.visitCount - a.visitCount});
-      
+
       for(i=0;i<99;i++){
-        
+
         if(r == infmv){break;}
-        
+
         if(hi[i] !== undefined){
-          
+
           if((/^(http|https|ftp|ftps|file|chrome|chrome-extension|chrome-devtools)\:\/\/(.*)/).test(hi[i].title) == false && (/^(ftp|ftps|file|chrome|chrome-extension)\:\/\/(.*)/).test(hi[i].url) == false){
-        
+
             var currentTime = new Date(hi[i].lastVisitTime);
             var hours = currentTime.getHours();
             var minutes = currentTime.getMinutes();
             if(hours < 10){hours = '0'+hours;}
             if(minutes < 10){minutes = '0'+minutes;}
             var time = hours+':'+minutes;
-          
+
             var title = hi[i].title;
             var url = hi[i].url;
             var furl = 'chrome://favicon/'+hi[i].url;
-            
+
             if(title == ''){
               title = url;
             }
-            
+
             mv.push({url: url, favicon: furl, title: title.replace(/\"/g, '&#34;'), visitCount: hi[i].visitCount});
-            
+
           r++;
           }
-          
+
         }
 
       }
-      
+
       localStorage['mv-cache'] = JSON.encode(mv);
-      
+
     }else{
       localStorage['mv-cache'] = 'false';
     }
@@ -131,7 +131,7 @@ for(var v in defaultValues){
 chrome.tabs.onRemoved.addListener(function(id){closedTab(id)});
 chrome.tabs.onCreated.addListener(function(tab){
   openedTab(tab);
-  if(localStorage['rh-historypage'] == 'yes' && (tab.url == 'chrome://history/' || tab.url == 'chrome://chrome/history/')){
+  if(localStorage['rh-historypage'] == 'yes' && (tab.pendingUrl == 'chrome://history/' || tab.pendingUrl == 'chrome://chrome/history/')){
     chrome.tabs.update(tab.id, {url: 'history.html', selected: true}, function(){});
   }
 });

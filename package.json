@@ -1,6 +1,6 @@
 {
   "name": "recenthistory",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "A chrome extension which displays your history in a pop-up.",
   "main": "manifest.json",
   "scripts": {
@@ -24,10 +24,13 @@
   "homepage": "https://github.com/umarsheikh13/recent-history#readme",
   "devDependencies": {
     "del": "^2.1.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.1.0",
     "gulp-replace": "^0.5.4",
     "path": "^0.12.7",
     "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "gulp4-run-sequence": "^1.0.0"
   }
 }
